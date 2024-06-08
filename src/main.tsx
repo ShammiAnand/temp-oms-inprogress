@@ -71,7 +71,7 @@ async function loginAction({ request }: LoaderFunctionArgs) {
   return redirect("/dashboard");
 }
 
-function authCheckLoader({ request }: LoaderFunctionArgs) {
+function authCheckLoader({}: LoaderFunctionArgs) {
   if (!fakeAuthProvider.isAuthenticated) {
     return redirect("/login");
   }
